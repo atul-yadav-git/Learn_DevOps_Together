@@ -11,3 +11,8 @@ Ssh -> first time setup of key genertaion and then key storage is little work, b
 Https (using pat) -> https is like username and password where instead of password we can create pat on github and use that for authenticate  bet github repo and local repo ; but have to enter pat regularly, ssh is more recommended and only one time setup issue then on much simpler; https using pat can be used where firewall or proxies are blocking ssh connection
 
 Im going to go with ssh method for authentication git as only first time setup issue then on much simpler to work with remote repo and my local git repos
+
+
+
+the pattern I mentione In .gitignore file , it will serach for it in that directory and all sub directoryies within that directory; but it will not apply to whole system or something only from directory where the gitignore file is present; it will not track that file, good for files that we dont want others to access like secrets or confidential
+
