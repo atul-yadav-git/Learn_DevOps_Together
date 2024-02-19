@@ -28,3 +28,12 @@ git config --global user.email "your.email@example.com" #use github noreply emai
 # go to directory where you want to get code on local systen and do clone
 
 git clone "git@github.com:username/repo-name.git" #this is ssh url of github repo; it  will not ask for username and passwd as ssh already done initially
+
+
+
+
+From github remote repo to local git repo;
+On github remote repo do some changes and then click on commit button and then to move them to local can do
+
+Git pull <remote repo saved name> <ur branch name>  (eg  . Git pull origin master)
+(can also do git fetch and git merge; pull is just combine both steps; and also during this conflicts come then work to resolve)
