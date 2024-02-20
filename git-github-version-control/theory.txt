@@ -1,9 +1,11 @@
 - Github is separate and git is separate
 
-Github = remote repo (online github that we see; its like storing your code on cloud; you are not dependent on your local system; anytime you can refer your code through github access and if its public others can also see and contribute open source project concept)
+Github = remote repo 
+(online github that we see; its like storing your code on cloud; you are not dependent on your local system; anytime you can refer your code through github access and if its public others can also see and contribute open source project concept)
 
 
-Git = local system repo ( locally on your system code is there; you can work on it and do version control and build stuff but when want to share it with others for collaboration or review; have to put it into github to allow that distributed version control and collaboration)
+Git = local system repo 
+( locally on your system code is there; you can work on it and do version control and build stuff but when want to share it with others for collaboration or review; have to put it into github to allow that distributed version control and collaboration)
 
 So for git and github authentication, two ways, ssh or https using pat(personal access token; password is not recommended) -> 
 Ssh -> first time setup of key genertaion and then key storage is little work, but then on , no need to enter password each time while interacting with remote repo, also more secure due to public private key cryptography
