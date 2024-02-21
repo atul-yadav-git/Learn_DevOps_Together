@@ -1,27 +1,27 @@
 # Working on Local Code Management with Git
 
 ## Configure Git
-```bash
+
 git config --global --list
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config is used to set up Git configuration options.
+
 The --global flag sets the configuration globally for all repositories on your machine.
 Common configuration options include user.name and user.email.
-Initialize a Git Repository
-bash
-Copy code
+
+##Initialize a Git Repository
+
 git init
 git init creates a new Git repository.
 By default, it initializes the repository in the current directory.
 The directory becomes a Git repository with a .git subdirectory.
-Check Repository Status
-bash
-Copy code
+##Check Repository Status
+
 git status
 git status shows the current state of the working directory and staging area.
 It displays information about modified files, untracked files, and the current branch.
-Stage Changes
+####Stage Changes
 bash
 Copy code
 git add filename
@@ -29,7 +29,7 @@ git add .
 git add --all/-A
 git add is used to add changes or new files to the staging area.
 Use specific file(s) or wildcards for various staging options.
-Commit Changes
+#Commit Changes
 bash
 Copy code
 git commit -m "message"
