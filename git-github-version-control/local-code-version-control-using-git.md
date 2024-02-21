@@ -1,27 +1,25 @@
 # **Local Code Management with Git**
 
-## Git Configuration
-
-### View Current Git Configuration
+# View Current Git Configuration
 
 ```
 git config --global --list
 ```
-##### To list current git configuration, can remove global or else put --system
+To list current git configuration, can remove global or else put --system
 
 
-### Set Git Configuration
+## Set Git Configuration
 
 ```
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-##### git config is used to set up Git configuration options on our local machine.
+git config is used to set up Git configuration options on our local machine.
 
-##### The --global flag sets the configuration globally for all repositories on your machine.
+The --global flag sets the configuration globally for all repositories on your machine.
 
-##### Common configuration options include user.name and user.email and default branch.
+Common configuration options include user.name and user.email and default branch.
 
 ## Initializing a Git Repository
 
@@ -29,10 +27,9 @@ git config --global user.email "your.email@example.com"
 git init
 git init is used to create a new Git repository.
 ```
+By default, it initializes the repository in the current directory, but you can specify a directory name as an optional argument.
 
-##### By default, it initializes the repository in the current directory, but you can specify a directory name as an optional argument.
-
-##### After running git init, the directory becomes a Git repository with a .git subdirectory.
+After running git init, the directory becomes a Git repository with a .git subdirectory.
 
 ## Checking Repository Status
 
@@ -40,10 +37,13 @@ git init is used to create a new Git repository.
 git status
 ```
 
-##### git status shows the current state of the working directory and staging area.
-##### It displays information such as modified files, untracked files, and the branch you are currently on.
-##### It helps you track the changes made to your repository and identify the files that need to be committed.
-##### The output of git status provides guidance on which Git commands to use next.
+git status shows the current state of the working directory and staging area.
+
+It displays information such as modified files, untracked files, and the branch you are currently on.
+
+It helps you track the changes made to your repository and identify the files that need to be committed.
+
+The output of git status provides guidance on which Git commands to use next.
 
 ## Staging Changes with Git Add
 
@@ -52,17 +52,14 @@ git add filename
 git add .
 git add --all/-A
 ```
-##### The git add command is used to add changes or new files to the staging area.
+    The git add command is used to add changes or new files to the staging area.
 
-##### Syntax:
+    Syntax:
+    Add specific file(s): git add <file>
+    Add all files in the current directory: git add .
+    Add all files in the current directory and its subdirectories: git add --all or git add -A
 
-##### Add specific file(s): git add <file>
-
-##### Add all files in the current directory: git add .
-
-##### Add all files in the current directory and its subdirectories: git add --all or git add -A
-
-##### Committing Changes with Git Commit
+# Committing Changes with Git Commit
 
 ```
 git commit -m "message"
