@@ -10,7 +10,7 @@ git config is used to set up Git configuration options.
 The --global flag sets the configuration globally for all repositories on your machine.
 Common configuration options include user.name and user.email.
 
-##Initialize a Git Repository
+###Initialize a Git Repository
 
 git init
 git init creates a new Git repository.
