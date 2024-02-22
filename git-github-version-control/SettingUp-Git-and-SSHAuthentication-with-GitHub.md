@@ -2,6 +2,20 @@
 
 ## Steps to Setup Git on Local System and Establish SSH Authentication with GitHub
 
+## Installation and Configuration
+
+First, ensure that Git is installed on your cloud instance or local system:
+
+```
+sudo yum install git -y
+```
+Then, configure Git globally with your username and email. 
+
+Use your GitHub account username and the noreply email provided by GitHub:
+```
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 ### Generate SSH Key
 
 ```
