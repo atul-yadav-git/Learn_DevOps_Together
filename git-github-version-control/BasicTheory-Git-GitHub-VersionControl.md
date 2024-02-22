@@ -1,6 +1,7 @@
 # **Basic Theory on Git, GitHub, and Version Control**
 ## Git vs. GitHub
 GitHub: Remote repository (online platform for code storage and collaboration).
+
 Git: Local system repository (facilitates version control and development).
 ## Getting Started with GitHub
 ```
@@ -45,16 +46,16 @@ Important branches:
             develop
 ```
 ## Authentication Methods
-Problem Statement
+Problem Statement:
+
 Understanding the differences between Personal Access Token (PAT) and SSH key pair authentication for GitHub and local Git systems.
 ```
 Solution
 PAT (Personal Access Token):
-
 Used instead of a password for GitHub CLI or API authentication.
 Essential for scripting and GitHub API interactions.
-SSH Key Pair:
 
+SSH Key Pair:
 Configures local Git system with GitHub account.
 Enables background authentication without entering tokens.
 Recommended for fixed Git systems.
@@ -62,8 +63,11 @@ Recommended for fixed Git systems.
 Detailed guides:
 
 Creating and using Personal Access Tokens
+
 Generating and using SSH keys
+
 Official Documentation
+
 Refer to the official documentation for in-depth insights and guidelines.
 
 ## Git Basics
