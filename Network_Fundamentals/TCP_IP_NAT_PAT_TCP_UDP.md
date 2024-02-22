@@ -66,7 +66,7 @@ PAT configuration involves defining translation rules for internal IP addresses 
 - Provides higher address conservation.
 - Enables multiple devices to share a single public IP.
 
-## Topic: Transport Layer and TCP/UDP
+## 4. Transport Layer and TCP/UDP
 
 ### Overview
 The transport layer is responsible for the reliable delivery of data across networks, providing services such as segmentation, reassembly, and error detection to ensure the integrity of data transmission. Two commonly used protocols in the transport layer are TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
@@ -87,7 +87,7 @@ The transport layer is responsible for the reliable delivery of data across netw
 - Often used for real-time communication and speed-critical applications like video streaming or online gaming.
 - Does not provide flow control or error recovery.
 
-## Topic: IPv6 (Internet Protocol version 6)
+## 5. IPv6 (Internet Protocol version 6)
 
 ### Overview
 IPv6 is the next-generation IP protocol designed to replace IPv4, offering a larger address space, improved addressing and routing, and better support for security features.
