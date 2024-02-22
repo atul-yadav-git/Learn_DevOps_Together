@@ -1,4 +1,4 @@
-# to do automation for devops remember 
+# To Do Automation For DevOps Remember 
 ```
 1. every application has documentation about how to communicate with its api, just google it, like github api, aws api, jira, bit bucket, so on 
  
