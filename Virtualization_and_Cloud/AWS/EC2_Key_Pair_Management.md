@@ -6,7 +6,7 @@ The `aws ec2 create-key-pair` command is utilized to generate a new key pair in 
 
 This key pair is crucial for securely connecting to EC2 instances.
 
-Command :`aws ec2 create-key-pair --key-name YourKeyName`
+Command :`aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem`
 ### Command Output Example
 ```
 {
