@@ -1,9 +1,17 @@
+# **EC2 Instance Management Through AWS CLI**
+```
+Guide on managing EC2 instances using the AWS CLI, covering:
+-  instance creation
+-  retrieval of essential details
+-  key pair management
+-  security group configuration
+-  instance termination.
+```
+
 *NOTE : This is post AWS CLI Setup*
 
-# **EC2 Instance Management Through AWS CLI**
-
-### Creating EC2 Instance
-- Imp parameters for instance creation: VPC, Subnet ID, Security Group, Key Pair, Instance Type, Image ID, Tags.
+## Creating EC2 Instance
+- **Important parameters for instance creation: VPC, Subnet ID, Security Group, Key Pair, Instance Type, Image ID, Tags.**
 
   ```
   aws ec2 run-instances \
@@ -14,7 +22,7 @@
   --subnet-id <YourSubnetId> \
   --count 1
   ```
-### To get EC2 instance type and Image ID
+### Obtaining EC2 Instance Type and Image ID
 ```
 -  For aws instance type and image id, its best to confirm from AWS Console or other official AWS documentation.
 -  As via AWS CLI there is no proper command to get this detail!
@@ -25,17 +33,17 @@
 ```
 aws ec2 describe-regions --query 'Regions[*].RegionName' --output table
 ```
-### Will list subnets and its availability zone and VPC for the default region configured in your AWS CLI
+### Listing Subnets, Availability Zones, and VPC for Default Region
 ```
 aws ec2 describe-subnets --query 'Subnets[*].[SubnetId,VpcId,AvailabilityZone]' --output table
 ```
-to list subnets for a specific region, you can use the --region option. 
+To list subnets for a specific region, you can use the --region option. 
 
 For example:`aws ec2 describe-subnets --query 'Subnets[*].[SubnetId,VpcId,AvailabilityZone]' --output table --region us-west-2`
 
-to get the default region configured in your cli `aws configure list | grep region`
+`aws configure list | grep region` To get the default region configured in your cli 
 
-## To retrieve information about security groups in your AWS account.
+### To retrieve information about security groups in your AWS account.
 ```
 aws ec2 describe-security-groups --query 'SecurityGroups[*].[GroupId,GroupName]' --output table
 ```
@@ -45,30 +53,33 @@ To get information for security groups across all regions available to your AWS 
 
 For example : `aws ec2 describe-security-groups --region us-east-1 --query 'SecurityGroups[*].[GroupId,GroupName]' --output table`
 
-```
-aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`]|[0].Value,InstanceId,InstanceType,State.Name,KeyName]' --output table
-```
-### Key Pair Management
+## Key Pair Management
 *Refer the file  EC2_Key_Pair_Management.md for complete steps and know how*
 ```
-Create a new key pair: `aws ec2 create-key-pair --key-name MyKeyPairName`
-Save the private key securely on your local machine.
+- Create a new key pair: `aws ec2 create-key-pair --key-name MyKeyPairName`
+- Save the private key securely on your local machine.
 ```
-### command to create aws ec2 instance in free tier
+## Command to Create AWS EC2 Instance in Free Tier
 ```
 aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<any name>}]' --image-id ami-0310483fb2b488153 --count 1 --instance-type t2.micro --key-name <yourKeyName> --security-group-ids <security grp id> --subnet-id <subnet id>
 
 ```
-### Retrieve all important details of an EC2 instance.
+## Retrieving All Important Details of an EC2 Instance
 
 ```
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`]|[0].Value,InstanceId,InstanceType,State.Name,KeyName,SecurityGroups[0].GroupName,Placement.AvailabilityZone,VpcId,SubnetId,PublicIpAddress,ImageId]' --output table
 ```
 The resulting output is presented as a table, making it easier to view and understand the details of your EC2 instances, including their names (if available), IDs, types, states, and SSH key pair names.
 
+### Command to get all imp details of a ec2 instance so that can connect to it!, but need to know instance id
+
+```
+aws ec2 describe-instances --instance-ids <YourInstanceID> --query 'Reservations[0].Instances[0].{PublicIP:PublicIpAddress,PublicDNS:PublicDnsName,PrivateIP:PrivateIpAddress,IPv6:NetworkInterfaces[0].Ipv6Addresses[0].Ipv6Address,KeyName:KeyName,UserName:Tags[?Key==`Username`]|[0].Value}'
+```
+
 `aws ec2 describe-tags --filters "Name=resource-id,Values=<YourInstanceID>"`
 
-#command to check tags associated with ur particular ec2 instance, get instance id from console, or by describe instances
+To check tags associated with a particular EC2 instance, get instance id from console or by describe instances command.
 
 ### Tagging an EC2 Instance
 
@@ -77,11 +88,7 @@ Use the following command to add a tag to an EC2 instance using its instance ID.
 ```
 aws ec2 create-tags --resources <instance-id> --tags Key=Name,Value=<tag-value>
 ```
-### Command to get all imp details of a ec2 instance so that can connect to it!, but need to know instance id
 
-```
-aws ec2 describe-instances --instance-ids <YourInstanceID> --query 'Reservations[0].Instances[0].{PublicIP:PublicIpAddress,PublicDNS:PublicDnsName,PrivateIP:PrivateIpAddress,IPv6:NetworkInterfaces[0].Ipv6Addresses[0].Ipv6Address,KeyName:KeyName,UserName:Tags[?Key==`Username`]|[0].Value}'
-```
 
 # Security Management
 ## EC2 CLI Commands for Modifying Inbound Traffic Rules and Public Access
