@@ -61,7 +61,7 @@ For example : `aws ec2 describe-security-groups --region us-east-1 --query 'Secu
 ```
 ## Command to Create AWS EC2 Instance in Free Tier
 ```
-aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<any name>}]' --image-id ami-0310483fb2b488153 --count 1 --instance-type t2.micro --key-name <yourKeyName> --security-group-ids <security grp id> --subnet-id <subnet id>
+aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<any name>}]' --image-id ami-07e1aeb90edb268a3 --count 1 --instance-type t2.micro --key-name <yourKeyName> --security-group-ids <security grp id> --subnet-id <subnet id>
 
 ```
 ## Retrieving All Important Details of an EC2 Instance
