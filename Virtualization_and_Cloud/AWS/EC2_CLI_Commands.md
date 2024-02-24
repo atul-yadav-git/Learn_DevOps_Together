@@ -43,9 +43,11 @@ aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Nam
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`]|[0].Value,InstanceId,InstanceType,State.Name,KeyName]' --output table
 ```
 ### Key Pair Management
+*Refer the file  EC2_Key_Pair_Management.md for complete steps and know how*
+```
 Create a new key pair: `aws ec2 create-key-pair --key-name MyKeyPairName`
 Save the private key securely on your local machine.
-
+```
 ### Retrieve all important details of an EC2 instance.
 
 ```
