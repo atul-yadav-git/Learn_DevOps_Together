@@ -43,7 +43,8 @@ For example:`aws ec2 describe-subnets --query 'Subnets[*].[SubnetId,VpcId,Availa
 
 `aws configure list | grep region` To get the default region configured in your cli 
 
-### To retrieve information about security groups in your AWS account.
+### To retrieve information about security groups in your AWS account. 
+Security Group essentially operates as a firewall, with rules that determine what network traffic can enter and leave.
 ```
 aws ec2 describe-security-groups --query 'SecurityGroups[*].[GroupId,GroupName]' --output table
 ```
