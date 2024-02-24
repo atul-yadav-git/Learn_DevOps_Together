@@ -57,7 +57,7 @@ For example : `aws ec2 describe-security-groups --region us-east-1 --query 'Secu
 *Refer the file  EC2_Key_Pair_Management.md for complete steps and know how*
 ```
 - Create a new key pair: `aws ec2 create-key-pair --key-name MyKeyPairName`
-- Save the private key securely on your local machine.
+- Save the private key securely on your local machine as .pem file and give permission as chmod 400
 ```
 ## Command to Create AWS EC2 Instance in Free Tier
 ```
