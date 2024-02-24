@@ -51,7 +51,6 @@ Securely manage key pairs to ensure authenticated connections.
 ## Listing Existing Key Pairs
 ### To list existing key pairs for default region:
 
-
 ```
 aws ec2 describe-key-pairs --query 'KeyPairs[*].[KeyName]' --output table
 ```
@@ -60,19 +59,26 @@ For Specific Region
 ```
 aws ec2 describe-key-pairs --region <your-region> --query 'KeyPairs[*].[KeyName]' --output table
 ```
+## To delete a key pair in AWS
+```
+aws ec2 delete-key-pair --key-name YourKeyName # Replace YourKeyName with the name of the key pair you want to delete.
+```
+Keep in mind that once a key pair is deleted, it cannot be recovered.
 ## Note:
 ```
-The key pair generated using the aws ec2 create-key-pair command is primarily intended for use with Amazon EC2 instances. It provides a secure way to access and authenticate yourself to EC2 instances.
+The key pair generated using the aws ec2 create-key-pair command is primarily intended for use with Amazon EC2 instances. 
+
+It provides a secure way to access and authenticate yourself to EC2 instances.
 
 AWS uses key pairs in various services, but the key pair generated for EC2 instances is specifically designed for SSH access to those instances. It won't directly work with other AWS resources that might use different authentication mechanisms.
 
 For other AWS resources, you might encounter different authentication methods. For example:
 
-Amazon S3: You typically use access keys (AWS access key ID and secret access key) for authentication.
+    Amazon S3: You typically use access keys (AWS access key ID and secret access key) for authentication.
 
-AWS Lambda: Authentication and authorization are often managed through AWS Identity and Access Management (IAM) roles and policies.
+    AWS Lambda: Authentication and authorization are often managed through AWS Identity and Access Management (IAM) roles and policies.
 
-Amazon RDS: Database instances often use username/password authentication.
+    Amazon RDS: Database instances often use username/password authentication.
 
 Always refer to the documentation of the specific AWS service you are working with to understand and implement the correct authentication method. While the EC2 key pair is specific to EC2 instances, AWS provides a range of authentication mechanisms to suit the requirements of different services.
 ```
