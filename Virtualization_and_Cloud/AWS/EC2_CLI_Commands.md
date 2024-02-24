@@ -1,6 +1,6 @@
 *NOTE : This is post AWS CLI Setup*
 
-## EC2 Instance Management
+# **EC2 Instance Management Through AWS CLI**
 
 ### Creating EC2 Instance
 - Imp parameters for instance creation: VPC, Subnet ID, Security Group, Key Pair, Instance Type, Image ID, Tags.
@@ -14,7 +14,7 @@
   --subnet-id <YourSubnetId> \
   --count 1
   ```
-
+### To get EC2 instance type and Image ID
 ```
 -  For aws instance type and image id, its best to confirm from AWS Console or other official AWS documentation.
 -  As via AWS CLI there is no proper command to get this detail!
@@ -70,38 +70,90 @@ The resulting output is presented as a table, making it easier to view and under
 
 #command to check tags associated with ur particular ec2 instance, get instance id from console, or by describe instances
 
+### Tagging an EC2 Instance
+
+Use the following command to add a tag to an EC2 instance using its instance ID.
+
+```
+aws ec2 create-tags --resources <instance-id> --tags Key=Name,Value=<tag-value>
+```
 ### Command to get all imp details of a ec2 instance so that can connect to it!, but need to know instance id
 
 ```
 aws ec2 describe-instances --instance-ids <YourInstanceID> --query 'Reservations[0].Instances[0].{PublicIP:PublicIpAddress,PublicDNS:PublicDnsName,PrivateIP:PrivateIpAddress,IPv6:NetworkInterfaces[0].Ipv6Addresses[0].Ipv6Address,KeyName:KeyName,UserName:Tags[?Key==`Username`]|[0].Value}'
 ```
 
-## Security Group Management
-### Ingress Traffic Rules
-First will need security grp of that ec2 instance to make changes
+# Security Management
+## EC2 CLI Commands for Modifying Inbound Traffic Rules and Public Access
 
-`aws ec2 describe-instances --instance-ids <your-instance-id> --query 'Reservations[*].Instances[*].[SecurityGroups]' --output text`
-# get security grp of that partcilaur instance id
+Learn how to modify inbound traffic rules and enable public access for your EC2 instances using AWS CLI commands.
 
-Authorize and revoke ingress traffic rules.
+### Retrieve Security Group Information
+Before making changes, obtain the security group associated with a specific EC2 instance.
+
+
+```
+aws ec2 describe-instances --instance-ids <your-instance-id> --query 'Reservations[*].Instances[*].[SecurityGroups]' --output text
+```
+
+### Authorize all incoming TCP traffic on port 80 from any IP address.
+
 
 ```
 aws ec2 authorize-security-group-ingress --group-id <your-security-group-id> --protocol tcp --port 80 --cidr 0.0.0.0/0
+````
+
+### Revoke all incoming TCP traffic on port 80.
+
+
 ```
-### Security Group Details
-Get all rules in a security group of a particular EC2 instance.
+aws ec2 revoke-security-group-ingress --group-id <your-security-group-id> --protocol tcp --port 80 --cidr 0.0.0.0/0
+```
+### Allow traffic on port 80 only from specific public IP addresses.
+
+
+```
+aws ec2 authorize-security-group-ingress --group-id <your-security-group-id> --protocol tcp --port 80 --cidr 1.2.3.4/32
+aws ec2 authorize-security-group-ingress --group-id <your-security-group-id> --protocol tcp --port 80 --cidr 5.6.7.8/32
+```
+
+### Get Rules in a Security Group
+Retrieve information about all rules in a security group associated with a specific EC2 instance.
 
 ```
 aws ec2 describe-security-groups --group-names <security-group-name>
 ```
-#### Default Region and Rule Opening
+
+### To get information about instances in a region other than the default, use the following command.
+
+```
+aws ec2 describe-instances --region us-west-2
+```
+
+### To check the default AWS CLI configured region, use the following command.
+
+
+```
+aws configure list
+```
+
+### Allow incoming traffic from a specified IP address to all ports and protocols.
+
+
+```
+aws ec2 authorize-security-group-ingress --group-id your-security-group-id --protocol all --cidr your-ip-address/32
+```
+
+
+### Security Considerations
+```
+Specify exact ports and IPs for added security. Limiting access based on specific IPs enhances the overall security posture.
+
+Leverage AWS Identity and Access Management (IAM) for fine-grained control over access within your organization.
+```
+#### Default Region
 Check the default AWS CLI configured region: `aws configure list`
 
-#### Authorize incoming traffic from a specified IP address to all ports and protocols.
-
-```
-aws ec2 authorize-security-group-ingress --group-id <your-security-group-id> --protocol all --cidr <your-ip-address>/32
-```
 ## To terminate AWS EC2 Instance
 ```
 aws ec2 terminate-instances --instance-ids <instanceid>
