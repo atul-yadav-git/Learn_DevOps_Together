@@ -93,6 +93,7 @@ Use the following command to add a tag to an EC2 instance using its instance ID.
 ```
 aws ec2 create-tags --resources <instance-id> --tags Key=Name,Value=<tag-value>
 ```
+`aws ec2 describe-tags --filters "Name=resource-id,Values=<YourInstanceID>"` command to check tags associated with ur particular EC2 instance, instance id needed.
 
 ## Connecting to an EC2 Instance
 Use the private key .pem file for SSH authentication:
