@@ -60,6 +60,8 @@ For example : `aws ec2 describe-security-groups --region us-east-1 --query 'Secu
 - Create a new key pair: `aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem`
 - Save the private key securely on your local machine as .pem file and give permission as chmod 400
 ```
+`aws ec2 describe-key-pairs --query 'KeyPairs[*].[KeyName]' --output table` To list existing key pairs for default region:
+
 ## Command to Create AWS EC2 Instance in Free Tier
 ```
 aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<any name>}]' --image-id ami-07e1aeb90edb268a3 --count 1 --instance-type t2.micro --key-name <yourKeyName> --security-group-ids <security grp id> --subnet-id <subnet id>
