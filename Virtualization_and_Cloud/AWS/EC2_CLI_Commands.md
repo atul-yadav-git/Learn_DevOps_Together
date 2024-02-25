@@ -62,11 +62,12 @@ For example : `aws ec2 describe-security-groups --region us-east-1 --query 'Secu
 ```
 `aws ec2 describe-key-pairs --query 'KeyPairs[*].[KeyName]' --output table` To list existing key pairs for default region:
 
-## Command to Create AWS EC2 Instance in Free Tier
+# Command to Create AWS EC2 Instance in Free Tier
 ```
 aws ec2 run-instances --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<any name>}]' --image-id ami-07e1aeb90edb268a3 --count 1 --instance-type t2.micro --key-name <yourKeyName> --security-group-ids <security grp id> --subnet-id <subnet id>
 
 ```
+*Note: key name should not have .pem*
 ## Retrieving All Important Details of an EC2 Instance
 
 ```
