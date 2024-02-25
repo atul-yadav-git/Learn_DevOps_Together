@@ -30,6 +30,16 @@ After connection, various tasks like software upgrades and configurations can be
 - AWS CLI commands are platform-agnostic (Windows/Linux) after configuration.
 - Configuration involves setting up AWS CLI on the local system.
 ```
+
+## About AWS CLI
+```
+-  AWS CLI (Command Line Interface) is a tool provided by AWS. It allows users to interact with AWS services and resources through the command line.
+-  When using AWS CLI, you are essentially interacting with the AWS API (Application Programming Interface).
+-  AWS CLI translates your commands into API requests behind the scenes.
+-  It communicates with AWS services over the internet to perform actions and retrieve information.
+-  AWS CLI serves as a convenient interface, simplifying the process of making API requests.
+-  Users can manage and interact with AWS resources using the AWS CLI without crafting manual HTTP requests
+```
 ## Benefits
 ```
 Implementing IaC methodologies streamlines cloud operations, enabling efficient resource management and automation of routine tasks.
