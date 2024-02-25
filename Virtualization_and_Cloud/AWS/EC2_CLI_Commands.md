@@ -1,11 +1,12 @@
 # **EC2 Instance Management Through AWS CLI**
 ```
 Guide on managing EC2 instances using the AWS CLI, covering:
--  instance creation
--  retrieval of essential details
--  key pair management
--  security group configuration
--  instance termination.
+  -  instance creation
+  -  retrieval of essential details
+  -  connecting to instance via ssh
+  -  key pair management
+  -  security group configuration
+  -  instance termination.
 ```
 
 *NOTE : This is post AWS CLI Setup*
