@@ -52,7 +52,7 @@ Example :
 ```
 aws s3api create-bucket --bucket my-unique-bucket --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
 ```
-This example creates an S3 bucket named my-unique-bucket in the us-west-2 regio
+This example creates an S3 bucket named my-unique-bucket in the us-west-2 region. If you stay within free tier limits, you won't incur any charges.
 
 ### Deletion of a bucket is done with:
 ```
