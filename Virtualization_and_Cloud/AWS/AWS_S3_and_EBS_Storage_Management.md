@@ -60,7 +60,7 @@ aws s3 rb s3://your-bucket-name
 ```
 S3 Bucket can only be deleted after emptying its content
 
-*Note: S3 API calls, such as get and list, incur charges. Just Storing objects in S3 doesn't incur charges*
+*Note: S3 API calls, such as get and list, incur charges. Data Transfer charges and size of objects stored, API calls may incur charges*
 
 ---
 
