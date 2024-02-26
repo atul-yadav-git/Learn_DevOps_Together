@@ -21,7 +21,8 @@ This command creates a new S3 bucket. Replace <bucket-name> with a unique name f
   ```
   aws s3api delete-bucket --bucket <bucket-name>
   ```
-This command deletes an empty S3 bucket. Replace <bucket-name> with the name of the bucket you want to delete. Buckets can only be deleted after its empty.
+-  This command deletes an empty S3 bucket. Replace <bucket-name> with the name of the bucket you want to delete. 
+-  Buckets can only be deleted after its empty. `aws s3 rm s3://your-bucket-name/ --recursive` To empty bucket at once.
 ### Get Bucket Location
 
   ```
@@ -66,21 +67,21 @@ This command copies an object from a source S3 bucket to a destination S3 bucket
 ### Get Object Metadata
 
 ```
-aws s3 head-object s3://<bucket_name>/<object_name>
+aws s3api head-object --bucket <bucket-name> --key <object-key>
 ```
 This command retrieves metadata about a specific object in S3, providing details such as size, last modified date, and content type.
 
--  Example: `aws s3 head-object s3://my-bucket/uploads/my_file.txt`
+-  Example: `aws s3api head-object --bucket my-bucket --key uploads/my_file.txt`
 
 
 ### Set Object ACL (Access Control List)
-
+*AWS CLI configured user must have necessary IAM permission to do this operations*
 ```
-aws s3 acl s3://<bucket_name>/<object_name> --acl <acl_value>
+aws s3api put-object-acl --bucket <bucket-name> --key <object-key> --acl <policy>
 ```
 This command allows you to control access to the object. Common ACL values include private, public-read, and bucket-owner-full-control.
 
--  Example: `aws s3 acl s3://my-bucket/uploads/shared_file.txt --acl public-read`
+-  Example: `aws s3api put-object-acl --bucket my-unique-bucket-8888 --key aws-console --acl public-read`
 
 ### Enable Website Hosting on a Bucket
 
@@ -96,7 +97,8 @@ This command enables serving website content directly from the S3 bucket, specif
 ```
 aws s3 sync <local_directory> s3://<bucket_name>/<prefix>
 ```
-This command synchronizes a local directory with a specific S3 bucket prefix, uploading new files, updating existing ones, and deleting absent files in S3.
+-  This command synchronizes a local directory with a specific S3 bucket prefix, uploading new files, updating existing ones, and deleting absent files in S3.
+-  It doesn't delete file in bucket, if deleted in local directory, to do that have to use `--delete` in `aws sync` command.
 
 Example: `aws s3 sync my_local_files s3://my-bucket/backups/`
 
