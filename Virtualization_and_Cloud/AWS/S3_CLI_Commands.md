@@ -2,6 +2,15 @@
 
 The AWS CLI provides a variety of commands for interacting with Amazon S3. 
 
+## AWS S3 Operations
+
+1. [Create, List, and Delete Buckets](#create-list-and-delete-buckets)
+2. [View Objects in Buckets](#view-objects-in-buckets)
+3. [Change ACL Permissions](#change-acl-permissions)
+4. [Copy or Move Objects to Buckets](#copy-or-move-objects-to-buckets)
+5. [Delete and List Objects in Bucket](#delete-and-list-objects-in-bucket)
+
+
 ## Bucket Operations
 
 ### List Buckets
