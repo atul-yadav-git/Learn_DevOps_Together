@@ -1,4 +1,4 @@
-# AWS Identity and Access Management (IAM) & Identity Centre
+# AWS Identity and Access Management (IAM) & Identity Center
 ```
 Both AWS IAM and Identity Center are crucial tools for managing access and identities in your AWS environment. However, they serve different purposes.
 ```
