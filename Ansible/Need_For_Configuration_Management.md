@@ -9,17 +9,24 @@ It involves tasks like server configuration, software installations, security up
 ```
 ## Challenges in Manual Server Management
 ```
--  Consider a scenario where a system administrator is tasked with managing a company's servers. 
+-  Consider a scenario where a system administrator is tasked with managing a company's servers.
+
 -  These servers may run different operating systems, such as Linux distributions like CentOS and Ubuntu, and require routine tasks like upgrades, security patches, and software installations.
+
 -  Managing configurations manually becomes increasingly difficult with a growing number of servers.
+
 -  Logging into each server and performing tasks became impractical. The process is time-consuming, especially when dealing with hundreds or thousands of servers.
+
 -  Writing shell scripts or PowerShell scripts to automate for each server and distribution becomes complex and hard to maintain across different server distributions (e.g., Ubuntu, CentOS) and in different programming languages 
+
 -  The tasks performed on servers include security updates, upgrades, and installations. For different server distributions (e.g., CentOS, Ubuntu), commands may vary. Managing these differences manually for hundreds of servers is challenging.
 ```
 ## Configuration Management Tools
 ```
 -  Configuration management tools like Puppet, Chef, Ansible, and SaltStack automate the management of server configurations. 
+
 -  These tools provide a way to define and manage configurations using code and scripts.
+
 -  They play a crucial role in handling security updates, upgrades, and installations.
 ```
 ---
@@ -70,11 +77,15 @@ It involves tasks like server configuration, software installations, security up
 - **Cookbooks:**
   - Configurations are defined in cookbooks.
 
+---
+
 ## Comparison with Other Tools
 - Ansible's architecture differs from tools like Puppet and Chef.
+
 - **Push Model vs. Pull Model:**
   - Puppet and Chef follow a pull model, where target servers periodically request updates from a central server.
   - Ansible, in contrast, uses a push model, simplifying setup with a direct push from the administrator's machine.
+
 - **Agentless Model:**
   - Ansible's agentless model eliminates the need for configuring target servers as slaves or agents.
   - Thus eliminating the need to install agents or software on target servers.
@@ -95,12 +106,9 @@ It involves tasks like server configuration, software installations, security up
 Ansible uses YAML, a familiar language, making it advantageous compared to Puppet, which requires learning a specific language.
 
 ## Supported Platforms
+-  `Linux and SSH` Ansible is best for Linux using SSH protocol for connections.
 
-### Linux and SSH
-Ansible is best for Linux using SSH protocol for connections.
-
-### Windows and WinRM
-For Windows, Ansible uses WinRM (Windows Remote Manager) protocol.
+-  `Windows and WinRM` For Windows, Ansible uses WinRM (Windows Remote Manager) protocol.
 
 ### Ansible's Benefits
 Ansible offers a push model, agentless architecture, and easy-to-understand Playbooks, making it a go-to tool for configuration management.
