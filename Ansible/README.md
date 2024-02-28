@@ -17,8 +17,8 @@ Whether you are a beginner or an experienced DevOps engineer, this repository ai
 Contributions are welcome! Whether you want to fix a typo, add a new exercise, or share your experience, please contribute.
 ```
 ## License
-```
-This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and share the content while giving appropriate attribution.
-```
 
+This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and share the content while giving appropriate attribution.
+
+---
 **Happy Ansible learning! 🎓✨**
