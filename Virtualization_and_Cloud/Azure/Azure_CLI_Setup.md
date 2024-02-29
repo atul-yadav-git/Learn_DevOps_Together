@@ -24,7 +24,10 @@ az login
 Follow the instructions displayed in the terminal and enter the code on a separate device with a web browser.
 
 Once successful, the terminal on your CentOS machine will display a confirmation message.
-
+```
+az account show
+```
+To check configured account information
 
 ## Azure Cloud Shell
 This option involves using a web-based terminal environment provided by Microsoft Azure.
