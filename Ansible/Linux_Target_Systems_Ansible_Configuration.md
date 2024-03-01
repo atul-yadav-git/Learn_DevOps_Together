@@ -20,14 +20,55 @@ sudo vi /etc/ansible/hosts
 ```
 ## Inventory file can have ini or yaml syntax
 
-ini syntax
+ini syntax inventory file
 ```
 [linux_servers]
-<public_ip> ansible_user=username ansible_host=<public_ip_or_public_dns> ansible_ssh_private_key_file=<path_to_private_key>
+server_1 ansible_user=<username> ansible_host=<public ip or dns> ansible_ssh_private_key_file=<private key path>
+server_2 ansible_user=<username> ansible_host=<public ip or dns> ansible_ssh_private_key_file=<private key path>
+server_3 ansible_user=<username> ansible_host=<public ip or dns> ansible_ssh_private_key_file=<private key path>
+
+[windows_servers]
+server_1 ansible_host=<public ip or dns> ansible_user=<username> ansible_password=<password> ansible_port=5985 ansible_connection=winrm
+server_2 ansible_host=<public ip or dns> ansible_user=<username> ansible_password=<password> ansible_port=5985 ansible_connection=winrm
+
 ```
 example 
 ```
 3.106.199.4 ansible_user=ec2-user ansible_host=ec2-3-26-52-136.ap-southeast-2.compute.amazonaws.com ansible_ssh_private_key_file=/home/ssh-keys/ansible`
+```
+
+yaml syntax inventory file
+```
+---
+linux_servers:
+  hosts:
+    server_1:
+      ansible_user: <username>
+      ansible_host: <public ip or dns>
+      ansible_ssh_private_key_file: <private key path>
+    server_2:
+      ansible_user: <username>
+      ansible_host: <public ip or dns>
+      ansible_ssh_private_key_file: <private key path>
+    server_3:
+      ansible_user: <username>
+      ansible_host: <public ip or dns>
+      ansible_ssh_private_key_file: <private key path>
+
+windows_servers:
+  hosts:
+    server_1:
+      ansible_host: <public ip or dns>
+      ansible_user: <username>
+      ansible_password: <password>
+      ansible_port: 5985
+      ansible_connection: winrm
+    server_2:
+      ansible_host: <public ip or dns>
+      ansible_user: <username>
+      ansible_password: <password>
+      ansible_port: 5985
+      ansible_connection: winrm
 ```
 ## Test connectivity using:
 ```
