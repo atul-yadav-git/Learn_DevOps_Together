@@ -3,7 +3,7 @@
 To configure Linux target systems, use SSH key pairs for passwordless authentication. 
 
 
-## Generate SSH Key Pair in main system:
+## Generate SSH Key Pair in control system:
 ```
 ssh-keygen
 ```
@@ -11,7 +11,7 @@ Save the public key in ~/.ssh/authorized-keys of all target systems.
 
 Connect to linux target system `ssh -i <private-key> username@public-ip/dns`
 
-## Create an inventory file in main system
+## Create an inventory file in control system
 /etc/ansible/hosts and add entries for Linux target systems:
 ```
 sudo mkdir /etc/ansible
@@ -31,6 +31,7 @@ example
 ```
 ## Test connectivity using:
 ```
+ansible linux_servers -m ping
 ansible all -m ping
 ```
 
