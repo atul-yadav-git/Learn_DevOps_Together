@@ -63,10 +63,29 @@ If using cloud providers like Azure or AWS, then open port `http: 5985` and `htt
 
 ## Update the inventory file for Windows target systems:
 
-ini syntax
+ini syntax inventory file
 ```
 [windows_servers]
-[public ip] ansible_host=[public ip] ansible_user=azureuser ansible_password=<password> ansible_port=5985 ansible_connection=winrm
+server_1 ansible_host=<public ip or dns> ansible_user=<username> ansible_password=<password> ansible_port=5985 ansible_connection=winrm
+server_2 ansible_host=<public ip or dns> ansible_user=<username> ansible_password=<password> ansible_port=5985 ansible_connection=winrm
+```
+
+yaml syntax inventory file
+```
+windows_servers:
+  hosts:
+    server_1:
+      ansible_host: <public ip or dns>
+      ansible_user: <username>
+      ansible_password: <password>
+      ansible_port: 5985
+      ansible_connection: winrm
+    server_2:
+      ansible_host: <public ip or dns>
+      ansible_user: <username>
+      ansible_password: <password>
+      ansible_port: 5985
+      ansible_connection: winrm
 ```
 ## Test connectivity using:
 ```
