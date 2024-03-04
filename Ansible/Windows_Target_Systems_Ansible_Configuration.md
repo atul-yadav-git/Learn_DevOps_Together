@@ -16,15 +16,27 @@ If you installed ansible with pipx or else follow guide for pip
 ```
 sudo dnf install python3-pip
 sudo pip3 install pywinrm
+sudo dnf install python3-winrm
 ```
 If you installed ansible with dnf
+```
+# For Python 3.11 using pip
 
+sudo dnf install python3.11-pip
+sudo python3.11 -m pip install pywinrm
+```
 If the above doesn't work, use the following:
 ```
 sudo dnf groupinstall "Development Tools"
 sudo dnf install python3-devel libffi-devel openssl-devel
 pip3 install pywinrm
 ```
+
+Activate the user-specific environment where pywinrm is installed:
+```
+source ~/.bashrc  # or source ~/.bash_profile, depending on your shell configuration
+```
+
 ---
 
 ## Verify and Enable WinRM on Windows Target Server:
