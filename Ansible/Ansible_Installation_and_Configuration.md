@@ -1,5 +1,6 @@
 # Ansible Installation and Configuration
 
+[Official Ansible Installation Documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-node-requirements)
 ```
 1.  Install Ansible using the dnf package manager
 2.  Using pipx (Python Environment Isolation)
