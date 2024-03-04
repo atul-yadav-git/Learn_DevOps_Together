@@ -6,12 +6,25 @@
 
 ## Install pywinrm on Control system:
 
-For Windows target systems, Ansible uses the pywinrm package to communicate over WinRM.
+For Windows target systems, Ansible uses the `pywinrm` library to manage Windows systems through WinRM (Windows Remote Management).
+
 ```
 pipx inject ansible pywinrm
 ```
 If you installed ansible with pipx or else follow guide for pip
 
+```
+sudo dnf install python3-pip
+sudo pip3 install pywinrm
+```
+If you installed ansible with dnf
+
+If the above doesn't work, use the following:
+```
+sudo dnf groupinstall "Development Tools"
+sudo dnf install python3-devel libffi-devel openssl-devel
+pip3 install pywinrm
+```
 ---
 
 ## Verify and Enable WinRM on Windows Target Server:
