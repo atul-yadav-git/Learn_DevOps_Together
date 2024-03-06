@@ -31,3 +31,34 @@ Playbooks in Ansible are the orchestration scripts that define a set of tasks to
 
 ### Includes and Imports
 - Playbooks can include or import other playbooks, making it easier to reuse common tasks or group related functionality.
+
+---
+
+### A typical structure for an Ansible playbook:
+
+```
+# playbook.yml
+
+- name: Playbook Title
+  hosts: target_servers
+  become: true  # If elevated privileges are required for tasks
+
+  tasks:
+    - name: Task 1
+      module_name:
+        parameter1: value1
+        parameter2: value2
+
+    - name: Task 2
+      module_name:
+        parameter1: value1
+        parameter2: value2
+
+    # Additional tasks...
+
+  handlers:
+    - name: Restart Service
+      service:
+        name: my_service
+        state: restarted
+```
