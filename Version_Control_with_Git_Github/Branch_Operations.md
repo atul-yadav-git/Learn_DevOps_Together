@@ -4,12 +4,13 @@
 
 - [Creating a New Branch Locally](#creating-a-new-branch-locally)
 - [Pushing a Local Branch to GitHub](#pushing-a-local-branch-to-github)
-- [Fetching and Working with a GitHub Branch Locally](#fetching-and-working-with-a-github-branch-locally)
+- [Fetching and Working with a GitHub Branch Locally](#To-fetch-and-work-with-a-branch-created-on-GitHub-in-your-local-repository,-follow-these-steps:)
 - [Merging Changes Between Branches](#merging-changes-between-branches)
 - [Merging Strategies](#merging-strategies)
 - [Squash Merge](#squash-merge)
-  - [Squash Merging Locally](#squash-merging-locally)
-  - [Squash Merging on GitHub](#squash-merging-on-github)
+  - [Squash Merging Locally](#squash-merge)
+  - [Squash Merging on GitHub](#squash-merge)
+- [Create a Pull Request on GitHub](#Create-a-Pull-Request-on-GitHub)
 
 ## Creating a New Branch Locally
 To create a new branch on your local Git repository, use the following commands:
