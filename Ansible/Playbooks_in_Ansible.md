@@ -32,12 +32,18 @@ Playbooks in Ansible are the orchestration scripts that define a set of tasks to
 ### Includes and Imports
 - Playbooks can include or import other playbooks, making it easier to reuse common tasks or group related functionality.
 
+### Running a playbook
+```yaml
+ansible-playbook <path to playbook.yml> -i <path to inventory /host file> --ask-vault-pass(or --vault-pass-file <path to ansible vault password file)
+```
+Better to give absolute paths if not using defaults like /etc/ansible/hosts
+
 ---
 
 ### A typical structure for an Ansible playbook:
 
-```
-# playbook.yml
+```yaml
+---
 
 - name: Playbook Title
   hosts: target_servers
