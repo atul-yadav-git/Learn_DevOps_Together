@@ -12,7 +12,7 @@
 -  By writing code to create and manage infrastructure resources, IaC automates the deployment process, streamlining deployments and improving their reliability. 
 -  This allows DevOps engineers to focus on higher-level tasks like application development and troubleshooting.
 
-### Key Points
+### Benefits of IaC
 - IaC eliminates repetitive, manual work by allowing the creation of scripts or configurations.
 - Consistency is achieved as all resources are defined in code, reducing the risk of inconsistent environments.
 - IaC provides scalability, control, and consistency to infrastructure management.
