@@ -66,6 +66,7 @@ Different cloud providers have their native tools for IaC, such as
 -  AWS: AWS CloudFormation Template, AWS CDK - YAML, JSON based
 -  Azure: Azure Resource Manager - JSON
 -  Terraform: Hybrid cloud - HashiCorp Configuration Language (HCL) based
+-  OpenStack: Heat Templates
 ```
 While each provider has its tools, Terraform emerges as a preferred choice for managing hybrid cloud environments.
 
