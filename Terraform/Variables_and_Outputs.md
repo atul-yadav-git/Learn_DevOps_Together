@@ -3,7 +3,8 @@
 ### Table of Contents
 
 1. [Overview](#overview)
-   1. [Terraform Variables Overview](#terrafrom-variables-overview)
+   1. [Terraform Variables Overview](#overview)
+   2. [File Structure Best Practices](#file-structure-best-practices-)
 
 2. [Input Variables](#input-variables-)
    1. [Variable Declaration Arguments](#variable-declaration-arguments-)
@@ -30,6 +31,11 @@
 ### Overview
 
 Variables in Terraform are crucial for parameterizing and sharing values within configurations and modules. They enhance dynamism, reusability, and flexibility in your Terraform projects.
+
+### File Structure Best Practices 📁
+
+Organize Terraform projects with separate files for provider configurations `provider.tf`, input variables `input.tf`, output variables `output.tf`, and main configurations `main.tf`.
+
 
 # Input Variables 🔄
 
