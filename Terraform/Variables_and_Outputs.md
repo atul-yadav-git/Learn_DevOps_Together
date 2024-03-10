@@ -6,29 +6,25 @@
    1. [Terraform Variables Overview](#terrafrom-variables-overview)
 
 2. [Input Variables](#input-variables-)
-   1. [Variable Declaration Arguments](#variable-declaration-arguments)
-   2. [Supported Type Keywords](#supported-type-keywords)
-   3. [Default Values and Type Constraints](#default-values-and-type-constraints)
-   4. [TFvars Files Purpose](#tfvars-files-purpose)
-   5. [Usage Summary](#usage-summary)
-   6. [Terraform Apply Command](#terraform-apply-command)
-   7. [Sensitive Input Variables](#sensitive-input-variables)
-   8. [Variables on the Command Line](#variables-on-the-command-line)
-   9. [Variable Definition Precedence](#variable-definition-precedence)
+   1. [Variable Declaration Arguments](#variable-declaration-arguments-)
+   2. [Supported Type Keywords](#supported-type-keywords-)
+   3. [Default Values and Type Constraints](#default-values-and-type-constraints-)
+   4. [TFvars Files Purpose](#tfvars-files-purpose-)
+   5. [Usage Summary](#usage-summary-)
+   6. [Terraform Apply Command](#terraform-apply-command-)
+   7. [Sensitive Input Variables](#sensitive-input-variables-)
+   8. [Variables on the Command Line](#variables-on-the-command-line-)
+   9. [Variable Definition Precedence](#variable-definition-precedence-)
 
-3. [Output Variables](#output-variables)
+3. [Output Variables](#output-variables-)
    1. [Defining Output Variables](#defining-output-variables)
-   2. [Sensitive Output](#sensitive-output)
-   3. [Handling Sensitive Values](#handling-sensitive-values)
+   2. [Sensitive Output](#sensitive-output-)
+   3. [Handling Sensitive Values](#handling-sensitive-values-)
 
-4. [Local Values](#local-values)
-   1. [Locals Block](#locals-block)
-   2. [Expressions](#expressions)
-   3. [Judicious Use](#judicious-use)
-   4. [Referencing Local Value](#referencing-local-value)
-   5. [Scope Limitation](#scope-limitation)
-
-
+4. [Local Values](#local-values-)
+   1. [Locals Block](#locals-block-)
+   2. [Expressions](#expressions-)
+   3. [Referencing Local Value](#referencing-local-value-)
 ---
 
 ### Overview
