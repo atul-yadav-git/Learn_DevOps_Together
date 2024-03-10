@@ -5,7 +5,7 @@
 1. [Overview](#overview)
    1. [Terraform Variables Overview](#terrafrom-variables-overview)
 
-2. [Input Variables](#input-variables)
+2. [Input Variables](#input-variables-)
    1. [Variable Declaration Arguments](#variable-declaration-arguments)
    2. [Supported Type Keywords](#supported-type-keywords)
    3. [Default Values and Type Constraints](#default-values-and-type-constraints)
