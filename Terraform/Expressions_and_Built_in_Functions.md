@@ -119,7 +119,7 @@ variable "example_string_interpolation" {
 ```
 Here, the expression uses string interpolation to incorporate the value of the variable "name" into the string.
 
-➕ Operators
+## ➕ Operators
 Operators in Terraform are symbols or words representing arithmetic, comparison, or logical operations within expressions. They are fundamental for constructing meaningful computations.
 
 Example:
@@ -132,7 +132,7 @@ variable "example_operator" {
 ```
 This expression utilizes the greater-than operator to determine whether the variable "count" is greater than 5.
 
-🔄 Function Calls
+## 🔄 Function Calls
 Function Calls involve the syntax for invoking pre-defined functions within Terraform expressions. These functions provide additional capabilities and can be used to perform specific tasks.
 
 Example:
