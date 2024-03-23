@@ -1,0 +1,7 @@
+terraform.tfstate
+terraform.tfstate*
+.terraform.lock.hcl
+terraform-provider-aws_v4.67.0_x5
+*.tfvars
+terraform-provider-aws*
+output_value*
