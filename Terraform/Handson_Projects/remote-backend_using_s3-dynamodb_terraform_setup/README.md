@@ -1,18 +1,33 @@
-# Steps to follow for execution
+# Remote Backend Setup using S3 and DynamoDB with Terraform
 
-1. Directory separation is used to separate backend configurtaion from infrastructure configiguration
-2. Any changes in infra configuration will not impact backend resources or configuration
-3. Statefile is critical resource so its needs to be kept isolated from other infra code
+-  This project demonstrates setting up a remote backend using AWS S3 and DynamoDB with Terraform. 
+-  It includes a modular structure for managing infrastructure resources and backend configuration separately.
 
-## Execution Steps 
-
-1. First go to remote_backend_statefile directory and do terrform init and apply
-2. once remote backend resources are created s3 and dynamodb table, according to their values update backend.tf in root directory
-3. Now do terraform init and apply in root directory it will initialize s3 remote backend and provision infra according to main.tf code
-
-## to migarte between local and remote
-
-1. Just make changes in backend.tf to either local or s3
-2. terraform init -migrate-state
-3. for s3, first make sure s3 and dynamodb are created and then point backend to s3 remote
-4. for local, just make changes in backend.tf and reinit terraform, to delete s3 and dynamodb, s3 all objects must be deleted first
+## Project Structure and Files Included:
+```css
+remote-backend_using_s3-dynamodb_terraform_setup/
+├── backend.tf
+├── main.tf
+├── modules/
+│   ├── ec2/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   └── security-group/
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── outputs.tf
+├── providers.tf
+├── README.md
+├── remote_backend_statefile/
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars
+│   ├── variables.tf
+│   └── emptying_s3_bucket.sh
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── terraform.tfvars
+└── variables.tf
+```
