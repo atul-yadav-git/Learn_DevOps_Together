@@ -11,7 +11,10 @@
 - [Passing Data to Instances](#passing-data-to-instances)
 
 ## Introduction
--  Provisioners in Terraform are essential tools for executing actions during resource creation or destruction. 
+-  Terraform provisioners allow you to execute scripts or transfer files on remote machines after a resource has been created.
+-  This enables us to configure or prepare our instance after it's launched.
+-  Provisioners run after resource creation. Ensure dependencies (e.g., network access) are configured first.
+-  While technically provisioners run "after" resource creation, some might run during the creation process itself (e.g., user_data scripts on cloud platforms like AWS)
 -  They come in different types, such as file, remote-exec, and local-exec provisioners, each serving specific automation needs in Terraform projects.
 
 ## file Provisioner
