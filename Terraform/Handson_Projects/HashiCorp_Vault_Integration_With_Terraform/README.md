@@ -67,7 +67,7 @@ Automation: Automates the provisioning process, reducing manual intervention and
 
 ## Benefits
 ```yaml
-- **Enhanced Security**: Leverage HashiCorp Vault for secure storage and retrieval of sensitive infrastructure secrets like EC2 keys and AMI IDs.
-- **Reduced Manual Errors**: Automate infrastructure provisioning with Terraform, minimizing human intervention and potential errors.
-- **Increased Efficiency**: Streamline infrastructure deployment with reusable modules.
+- Enhanced Security: Leverage HashiCorp Vault for secure storage and retrieval of sensitive infrastructure secrets like EC2 keys and AMI IDs.
+- Reduced Manual Errors: Automate infrastructure provisioning with Terraform, minimizing human intervention and potential errors.
+- Increased Efficiency: Streamline infrastructure deployment with reusable modules.
 ```
