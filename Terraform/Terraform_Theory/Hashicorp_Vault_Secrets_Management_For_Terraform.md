@@ -35,6 +35,11 @@
 - **Policy**: Access control mechanism defining permissions for entities in Vault.
 - **Role ID**: Identifier for authenticating entities like Terraform with Vault.
 - **Secret ID**: Authentication credential used along with role ID to access secrets in Vault.
+- **Mount**: A logical path within Vault that provides access to a specific secret engine.
+- **Secret Engine**: A plugin that provides a specific type of secret storage (e.g., key-value, database secrets, AWS, Kubernetes).
+- **KV Engine**: A built-in secret engine in Vault that stores key-value pairs.
+- **Role**: A named collection of permissions that can be assigned to users or services in Vault. 
+
 
 ---
 
