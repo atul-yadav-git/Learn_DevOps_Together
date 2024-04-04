@@ -1,0 +1,27 @@
+
+import {
+  id = "i-0bff763a38a7bf9e8"
+  to = aws_instance.ec2-sydney
+}
+
+
+import {
+  id = "i-09e50d5e2553708ba"
+  to = aws_instance.ec2-singapore
+
+  provider = aws.singapore #default aws region is sydney, so for other specifying to avoid issue
+}
+
+import {
+  id = "sg-08c0992de07027cce"
+  to = aws_security_group.ssh-sydney
+}
+
+import {
+  id = "sg-00da8bb90665588fa"
+  to = aws_security_group.ssh-singapore
+
+  provider = aws.singapore #default aws region is sydney, so for other specifying to avoid issue
+}
+
+
