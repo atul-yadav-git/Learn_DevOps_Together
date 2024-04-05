@@ -2,6 +2,13 @@
 
 Welcome to the Terraform Learning Repository! 🚀 This repository is a space for sharing and learning about Terraform, a powerful infrastructure as code (IaC) tool.
 
+
+## Main thing to know about Terraform:
+
+-  Before delving into Terraform, it's essential to understand how to provision resources manually through the console of cloud providers.
+-  Familiarize yourself with the required and optional fields involved in this process.
+-  Once you grasp manual provisioning, you'll be better equipped to automate the same tasks using Terraform.
+
 ## About
 
 This repository is dedicated to documenting my Terraform learning journey. I believe that sharing knowledge not only helps others but also enhances my understanding. Feel free to explore the code, ask questions, correct any mistakes, or use the content for your own learning.
