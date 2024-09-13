@@ -27,6 +27,18 @@ ssh-keygen -t rsa -b 4096 -C "any comment"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
+
+### Add SSH Key to GitHub: 
+```
+Copy your SSH key:
+cat ~/.ssh/id_ed25519.pub
+Go to GitHub -> Settings -> SSH and GPG Keys -> New SSH Key, then paste the key and click Add SSH Key.
+```
+### Test SSH Connection:
+```
+ssh -T git@github.com
+A successful connection will display a welcome message from GitHub.
+```
 ## Initialize Git in Local Repository
 
 ```
