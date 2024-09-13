@@ -1,5 +1,5 @@
 
-# Authenticating GitHub with Local Git: A Step-by-Step Guide
+# Authenticating GitHub with Local Git: A Step-by-Step Guide for initial setup
 
 ## Purpose
 This guide provides detailed instructions on how to authenticate your GitHub account with your local Git repository using either SSH keys or Personal Access Tokens (PAT). It outlines both methods and offers best practices for secure and efficient version control between your local machine and GitHub.
