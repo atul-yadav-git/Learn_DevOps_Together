@@ -12,6 +12,9 @@ Expect a diverse range of content covering various DevOps tools, technologies, a
 
 Each learning endeavor, whether successful or challenging, will be documented to provide insights into the practical aspects of DevOps.
 ```
+
+For more information about my projects, skills, and professional background, visit my portfolio: https://www.techwithatul.com
+
 ## 🔧 Why I Created This Repository
 ```
 Personal Learning: This repository is a personal journal of my DevOps learning path, helping me track progress and improvements over time.
